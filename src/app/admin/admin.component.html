@@ -1,0 +1,50 @@
+<div class="container">
+    <h2>Add Student</h2>
+    <div class="mb-3">
+        <label for="name" class="form-label">Name</label>
+        <input type="text" class="form-control" id="addname" required [(ngModel)]="addname">
+    </div>
+    <div class="mb-3">
+        <label for="rollNo" class="form-label">Roll No</label>
+        <input type="text" class="form-control" id="addroll" required [(ngModel)]="addroll">
+    </div>
+    <div class="mb-3">
+        <label for="result" class="form-label">Result</label>
+        <input type="text" class="form-control" id="addres" required [(ngModel)]="addres">
+    </div>
+    <button class="btn btn-primary" (click)="onAdd()">Add Student</button>
+</div>
+
+<div class="container mt-5">
+    <h2>Delete Student</h2>
+    <div class="mb-3">
+        <label for="rollNo" class="form-label">Roll No</label>
+        <input type="text" class="form-control" id="rollNo" required [(ngModel)]="delroll">
+    </div>
+    <button type="submit" class="btn btn-primary" (click)="onDelete()">Delete Student</button>
+</div>
+
+<div class="container mt-5">
+    <h2>Current List</h2>
+    <button (click)="clearLocalStorage()" class="btn btn-primary btn-sm">Clear List</button>
+    <div class=" table-responsive table">
+        <div *ngIf="students.length > 0">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Student Name</th>
+                        <th>Roll Number</th>
+                        <th>Result</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let student of students">
+                        <td>{{ student.name }}</td>
+                        <td>{{ student.rollNumber }}</td>
+                        <td>{{ student.result }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

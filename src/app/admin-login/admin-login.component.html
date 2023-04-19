@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card mt-5">
+        <div class="card-body">
+          <h3 class="card-title text-center mb-4">Admin Login</h3>
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="adminUsername" [(ngModel)]="username" placeholder="Username">
+            <label for="adminUsername">Username</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="password" class="form-control" id="adminPassword" [(ngModel)]="password"
+              placeholder="Password">
+            <label for="adminPassword">Password</label>
+          </div>
+          <div class="d-grid gap-2">
+            <button type="submit" class="btn btn-primary btn-block" (click)="onSubmit()">Login</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+<div class="container mt-5">
+    <div class="row">
+        <h2>Results for Exam</h2>
+        <div class="table-responsive table">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Student Name</th>
+                        <th>Roll Number</th>
+                        <th>Result</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let student of students">
+                        <td>{{ student.name }}</td>
+                        <td>{{ student.rollNumber }}</td>
+                        <td>{{ student.result }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
